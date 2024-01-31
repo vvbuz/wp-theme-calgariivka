@@ -1,0 +1,25 @@
+.article-preview {
+    gap: 15px;
+
+    .article-preview__element {
+
+        .article-preview__image img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .article-preview__title a {
+            color: #009;
+            text-decoration: none;
+        }
+        .article-preview__date {
+            color: rgba(0,0,0,0.5);
+        }
+
+        .article-preview__description {
+            width: 100%;
+        }
+    }
+}
