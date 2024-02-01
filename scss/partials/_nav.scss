@@ -7,12 +7,16 @@ header {
         display: flex;
         align-self: center;
         text-decoration: none;
+        color: black;
+    }
+    a:hover {
+        text-decoration: underline;
     }
 
-    .menu-calgariivka-container {
+    .menu-navbar-container {
         .menu {
             display: flex;
-            gap: 50px;
+            gap: 30px;
             list-style-type: none;
 
             .menu-item {
@@ -21,4 +25,8 @@ header {
             }
         }
     }
+}
+
+.active {
+    font-weight: 900;
 }

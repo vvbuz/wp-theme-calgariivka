@@ -1,7 +1,9 @@
 <?php get_header(); ?>
-<div class="row">
-    <div class="col-12 col-md-6" id="calgary-time"></div>
-    <div class="col-12 col-md-6" id="kyiv-time"></div>
+<div class="time">
+    <div class="row">
+        <div class="col-12 col-md-6" id="calgary-time"></div>
+        <div class="col-12 col-md-6" id="kyiv-time"></div>
+    </div>
 </div>
 
 <script>
