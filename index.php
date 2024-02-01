@@ -1,9 +1,12 @@
 <?php get_header(); ?>
 <div>
-    <h1>Посібники</h1>
+    <?php
+    $query_guides = new WP_Query(array('category_name' => 'guides', "post_count" => 1));
+    if ($query_guides->have_posts()) {
+        echo '<h1>Посібники</h1>';
+    } ?>
     <div class="row article-preview">
         <?php
-        $query_guides = new WP_Query(array('category_name' => 'guides', "post_count"=>1));
         if ($query_guides->have_posts()) : while ($query_guides->have_posts()) : $query_guides->the_post(); ?>
                 <?php get_template_part('preview'); ?>
         <?php
