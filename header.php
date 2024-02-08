@@ -6,10 +6,11 @@
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,700,0,-25" />
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
     <?php wp_body_open(); ?>
     <div class="container">
         <header>
@@ -32,7 +33,14 @@
                 </svg>
             </a>
             <?php wp_nav_menu(array("menu" => "navbar")); ?>
+            <span id="mobile-menu-button" class="material-symbols-outlined">
+                menu
+            </span>
         </header>
         <hr>
+        <div class="mobile-menu">
+            <?php wp_nav_menu(array("menu" => "navbar")); ?>
+        </div>
+
         <div id="container">
             <main id="content" role="main">

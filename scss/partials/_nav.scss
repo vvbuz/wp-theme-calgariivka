@@ -30,3 +30,32 @@ header {
 .active {
     font-weight: 900;
 }
+
+.mobile-menu {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    top: 100px;
+    background-color: white;
+    display: none;
+}
+
+.mobile-menu--active {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 15px 0;
+
+        .menu-navbar-container {
+            display: none;
+
+            #mobile-menu-button {
+                -webkit-user-select: none; /* Safari */
+                -ms-user-select: none; /* IE 10 and IE 11 */
+                user-select: none; /* Standard syntax */
+            }
+        }
+    }
+}

@@ -1,7 +1,8 @@
 <?php
 add_action('wp_enqueue_scripts', 'calgariivka_style');
 function calgariivka_style() {
-    wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/style.css' );
+    wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css' );
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/scripts.js');
 }
 
 add_action('after_setup_theme', 'blankslate_setup');

@@ -22,10 +22,11 @@
         <div class="col-12 col-md-6">
             <ul>
                 <li><a href="https://t.me/calgarynewsua">Telegram</a></li>
-                <li><a href="">Підписатись на розсилку</a></li>
+                <!-- TODO: Add functional for 'Subscribe to newsletter' button -->
+                <!-- <li><a href="">Підписатись на розсилку</a></li> -->
             </ul>
         </div>
-        <div class="col-12 col-md-2 offset-2">
+        <div class="col-12 col-md-2 offset-md-2">
             <?php wp_nav_menu(array("menu"=>"footer-1")); ?>
         </div>
         <div class="col-12 col-md-2">
