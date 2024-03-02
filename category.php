@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<header class="header">
+<div>
     <h1 class="entry-title" itemprop="name">
         <?php single_term_title(); ?>
     </h1>
@@ -9,7 +9,7 @@
             echo get_the_archive_description();
         } ?>
     </div>
-</header>
+</div>
 <div class="row article-preview">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <?php get_template_part('preview'); ?>

@@ -37,7 +37,6 @@
                 menu
             </span>
         </header>
-        <hr>
         <div class="mobile-menu">
             <?php wp_nav_menu(array("menu" => "navbar")); ?>
         </div>

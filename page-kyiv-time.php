@@ -1,10 +1,24 @@
 <?php get_header(); ?>
+
+<h1>Порівняння часу Калгарі та Києва</h1>
+<?php
+date_default_timezone_set('America/Edmonton'); // Set Calgary time zone
+$calgaryTime = date('Y-m-d H:i:s'); // Get Calgary time
+
+date_default_timezone_set('Europe/Kiev'); // Set Kyiv time zone
+$kyivTime = date('Y-m-d H:i:s'); // Get Kyiv time
+?>
 <div class="time">
     <div class="row">
-        <div class="col-12 col-md-6" id="calgary-time"></div>
-        <div class="col-12 col-md-6" id="kyiv-time"></div>
+        <div class="col-12 col-md-6">
+            <p>Калгарі, Канада: <span id="calgary-time"><?php echo $calgaryTime; ?></span></p>
+        </div>
+        <div class="col-12 col-md-6">
+            <p>Київ, Україна: <span id="kyiv-time"><?php echo $kyivTime; ?></span></p>
+        </div>
     </div>
 </div>
+
 
 <script>
     function updateCalgaryTime() {
@@ -18,11 +32,12 @@
             day: 'numeric',
             hour: 'numeric',
             minute: 'numeric',
-            second: 'numeric'
+            second: 'numeric',
+            locale: 'uk-UA' // Set Ukrainian locale
         };
 
         const calgaryTime = new Date().toLocaleString('en-US', options);
-        calgaryTimeElement.textContent = `Current Calgary Time: ${calgaryTime}`;
+        calgaryTimeElement.textContent = `${calgaryTime}`;
     }
 
     function updateKyivTime() {
@@ -36,11 +51,12 @@
             day: 'numeric',
             hour: 'numeric',
             minute: 'numeric',
-            second: 'numeric'
+            second: 'numeric',
+            locale: 'uk-UA' // Set Ukrainian locale
         };
 
         const kyivTime = new Date().toLocaleString('en-US', options);
-        kyivTimeElement.textContent = `Current Kyiv Time: ${kyivTime}`;
+        kyivTimeElement.textContent = `${kyivTime}`;
     }
 
     // Update the time initially and every second
@@ -49,4 +65,5 @@
     setInterval(updateCalgaryTime, 1000);
     setInterval(updateKyivTime, 1000);
 </script>
+
 <?php get_footer(); ?>
