@@ -12,17 +12,15 @@
         echo '</h2>';
     } ?>
     <div class="entry-meta">
-        <time class="entry-date"
-        datetime="<?php echo esc_attr(get_the_date('c')); ?>"
-        title="<?php echo esc_attr(get_the_date()); ?>"
-        <?php if (is_single()) {
-            echo 'itemprop="datePublished" pubdate';
-        } ?>>
-            <?php the_time(get_option('date_format')); ?>
-        </time>
-        <?php if (is_single()) {
-            echo '<meta itemprop="dateModified" content="' . esc_attr(get_the_modified_date()) . '" />';
-        } ?>
+        <?php
+                $original_date = get_the_date('j F Y');
+                $ukrainian_date = translate_month_to_ukrainian($original_date);
+                if (is_single()) {
+                    echo '<time class="entry-date" datetime="' . esc_attr(get_the_date('c')) . '" title="' . esc_attr(get_the_date()) . '" itemprop="datePublished" pubdate>' . $ukrainian_date . '</time>';
+                } else {
+                    echo '<time class="entry-date" datetime="' . esc_attr(get_the_date('c')) . '" title="' . esc_attr(get_the_date()) . '">' . $ukrainian_date . '</time>';
+                }
+        ?>
     </div>
     <div itemprop="article-preview__description"><?php the_excerpt(); ?></div>
 </article>

@@ -117,3 +117,16 @@ function special_nav_class ($classes, $item) {
     }
     return $classes;
 }
+
+// Translate date to ukrainian language
+function translate_month_to_ukrainian($date) {
+    $english_months = array(
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+    );
+    $ukrainian_months = array(
+        'січня', 'лютого', 'березня', 'квітня', 'травня', 'червня',
+        'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'
+    );
+    return str_replace($english_months, $ukrainian_months, $date);
+}
