@@ -20,10 +20,16 @@
     <div class="row article-preview">
         <?php
         $query_news = new WP_Query(array('category_name' => 'news'));
-        if ($query_news->have_posts()) : while ($query_news->have_posts()) : $query_news->the_post(); ?>
-                <?php get_template_part('preview'); ?>
-        <?php
-            endwhile;
+        $i = 0;
+        if ($query_news->have_posts()) : while ($query_news->have_posts()) : $query_news->the_post();
+            $class = ($i == 0) ? 'col-lg-12 col-12 article-preview__element-1' : 'col-lg-4 col-12 article-preview__element';
+            ?>
+                <div class="<?= $class ?>">
+                    <?php get_template_part('preview'); ?>
+                </div>
+            <?php
+            $i++;
+        endwhile;
         endif;
         ?>
     </div>

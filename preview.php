@@ -1,4 +1,4 @@
-<article class="col-lg-4 col-12 article-preview__element" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php get_template_part('preview', (is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content')); ?>
     <?php if (is_singular()) {
         echo '<h1 class="article-preview__title">';
@@ -22,5 +22,4 @@
                 }
         ?>
     </div>
-    <div itemprop="article-preview__description"><?php the_excerpt(); ?></div>
 </article>
