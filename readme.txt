@@ -1,4 +1,4 @@
-=== BlankSlate ===
+=== Calgariivka ===
 
 Contributors: vvbuz
 Theme link: https://github.com/vvbuz/calgariivka
