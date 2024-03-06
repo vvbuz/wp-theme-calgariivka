@@ -1,3 +1,9 @@
+<a class="back-link" href="<?php echo wp_get_referer(); ?>">
+    <div>
+        <span class="material-symbols-outlined">arrow_back</span>
+        <span class="back-link__text">Повернутись назад</span>
+    </div>
+</a>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <h1 class="entry-title" itemprop="headline">
         <?php the_title(); ?>
