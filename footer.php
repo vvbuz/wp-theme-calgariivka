@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <ul>
-                <li><a href="https://t.me/calgarynewsua">Telegram</a></li>
+                <li><a href="https://t.me/calgariivka">Telegram</a></li>
                 <!-- TODO: Add functional for 'Subscribe to newsletter' button -->
                 <!-- <li><a href="">Підписатись на розсилку</a></li> -->
             </ul>
