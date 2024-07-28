@@ -25,10 +25,14 @@
             <!-- <li><a href="">Підписатись на розсилку</a></li> -->
         </div>
         <div class="col-12 col-md-2 offset-md-2">
-            <?php wp_nav_menu(array("menu"=>"footer-1")); ?>
+            <?php // Empty if no sidebar
+            if (is_active_sidebar('footer-1')) {
+                wp_nav_menu(array("menu"=>"footer-1")); } ?>
         </div>
         <div class="col-12 col-md-2">
-            <?php wp_nav_menu(array("menu"=>"footer-2")); ?>
+            <?php // Empty if no sidebar
+            if (is_active_sidebar('footer-2')) {
+                wp_nav_menu(array("menu"=>"footer-2")); } ?>
         </div>
     </div>
     <div class="row">
