@@ -62,22 +62,20 @@
 <div>
     <div class="row article-preview">
         <?php
-        $args = array(
+        $args_other = array(
             'post_type' => 'post',
-            'posts_per_page' => -1,
+            'posts_per_page' => 20,
             'offset' => 5,
             'tax_query' => array(
                 array(
-                    'taxonomy' => 'category',
-                    'field' => 'slug',
-                    'terms' => 'news',
+                    'category_name' => 'news',
                 ),
             ),
         );
-        $query = new WP_Query($args);
-        if ($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
+        $query_other = new WP_Query($args_other);
+        if ($query_other->have_posts()) {
+            while ($query_other->have_posts()) {
+                $query_other->the_post();
                 ?>
                 <div class="col-lg-4 col-12 article-preview__element">
                     <?php get_template_part('preview'); ?>
