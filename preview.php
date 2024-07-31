@@ -16,6 +16,7 @@
             echo '</h2>';
         } ?>
         <div class="entry-meta">
+            <div class="article-preview__description"><?php the_excerpt(); ?></div>
             <?php
                     $original_date = get_the_date('j F Y');
                     $ukrainian_date = translate_month_to_ukrainian($original_date);
@@ -25,7 +26,6 @@
                         echo '<time class="entry-date" datetime="' . esc_attr(get_the_date('c')) . '" title="' . esc_attr(get_the_date()) . '">' . $ukrainian_date . '</time>';
                     }
             ?>
-            <div class="article-preview__description"><?php the_excerpt(); ?></div>
         </div>
     </div>
 </article>
