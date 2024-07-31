@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<a class="back-link" href="<?php echo wp_get_referer(); ?>">
-    <div>
+<a class="row back-link" href="<?php echo home_url(); ?>">
+    <div class="offset-sm-1">
         <span class="material-symbols-outlined">arrow_back</span>
         <span class="back-link__text">Повернутись назад</span>
     </div>
@@ -13,9 +13,11 @@
             </h1>
             <div class="entry-meta">
                 <!-- The source link -->
-                <span style="color: rgb(76,76,76);">Джерело: </span>
-                <a href="<?php echo get_post_custom()['Source'][0]; ?>">CBC News</a>
-                <span> • </span>
+                <?php if (isset(get_post_custom()['Source'][0])) { ?>
+                    <span style="color: rgb(76,76,76);">Джерело: </span>
+                    <a href="<?php echo get_post_custom()['Source'][0]; ?>">CBC News</a>
+                    <span> • </span>
+                <?php } ?>
 
                 <!-- Date of post -->
                 <!-- <time
