@@ -15,7 +15,7 @@
                 <!-- The source link -->
                 <?php if (isset(get_post_custom()['footnotes'][0])) { ?>
                     <span style="color: rgb(76,76,76);">Джерело: </span>
-                    <a href="<?php echo get_post_custom()['Source'][0]; ?>">CBC News</a>
+                    <a href="<?php echo get_post_custom()['footnotes'][0]; ?>">CBC News</a>
                     <span> • </span>
                 <?php } ?>
 
